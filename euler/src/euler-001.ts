@@ -4,7 +4,6 @@
  * Find the sum of all the multiples of 3 or 5 below 1000.
  */
 
-
 /**
  * Solution of first Euler problem.
  * @param {number} n - Value that limit the sum of natural numbers.
@@ -16,8 +15,8 @@ function Euler001(n: number): number {
   for (let i = 0; i < n; i++) {
     if (i % 3 === 0 || i % 5 === 0) {
       sum += i;
-      }
     }
+  }
 
   return sum;
 }
