@@ -1,0 +1,35 @@
+# Speak Number Guessing Game
+
+Speak number guessing game.
+
+## Instructions
+
+To start this app:
+
+- Installing Dependencies:
+
+```
+npm i
+```
+
+- Compiles and hot-reload for development:
+
+```
+npm run dev
+```
+
+- Compiles and minifies for production:
+
+```
+npm run build
+```
+
+- Run tests:
+
+```
+npm run test:e2e
+```
+
+---
+
+Inspired on : [vanillawebprojects](https://github.com/bradtraversy/vanillawebprojects/tree/master/speak-number-guess)
