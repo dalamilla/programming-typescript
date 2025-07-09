@@ -1,0 +1,9 @@
+@import './base.css';
+
+#app {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--body-bg-color);
+}

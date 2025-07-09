@@ -1,0 +1,22 @@
+:root {
+  --body-bg-color: #dee0e2;
+  --app-bg-color: #dee0e2;
+  --status-h-bg-color: #fff;
+  --status-bg-color: #f9fbfc;
+  --button-bg-color: #22ae7d;
+  --button-bgh-color: #198861;
+  --p-color: #6f6f7f;
+  --component-bg-color: #fff;
+  --component-br-color: #e5e5e5;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--body-bg-color);
+}
