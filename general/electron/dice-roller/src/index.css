@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+#app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#app img {
+  width: 30%;
+  height: 30%;
+  padding-bottom: 5vh;
+}
+
+#app button {
+  width: 15%;
+  height: 5%;
+  border-radius: 10px;
+  background-color: #e83b59;
+  border: none;
+  color: #fff;
+  font-size: 25px;
+}
+
+#app button:hover {
+  background-color: #e11d3f;
+  color: #fff;
+}
