@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import Button from './components/Button';
+import DollarForm from './components/DollarForm';
+import CentsDetails from './components/CentsDetails';
+import arrow from './assets/arrow.png';
+import type { Cent } from './types/cent';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [dollars, setDollars] = useState(0);
+  const [cents, setCents] = useState([
+    { type: 'Quarter', value: 25, quantity: 0 },
+    { type: 'Dime', value: 10, quantity: 0 },
+    { type: 'Nickel', value: 5, quantity: 0 },
+    { type: 'Penny', value: 1, quantity: 0 },
+  ]);
+
+  const Convert = () => {
+    let totalCents = dollars * 100;
+
+    setCents(
+      cents.map((cent: Cent) => {
+        const quantity = Math.floor(totalCents / cent.value);
+        totalCents = totalCents % cent.value;
+        return { ...cent, quantity: quantity };
+      }),
+    );
+  };
+
+  const handleDollarForm = (value: string) => {
+    setDollars(Number(value));
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="app">
+      <h1>Convertion</h1>
+      <div className="app-convert">
+        <DollarForm onInputChange={handleDollarForm} />
+        <img src={arrow} className="app-convert-arrow" alt="arrow" />
+        <CentsDetails cents={cents} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <Button onClick={Convert}>Convert</Button>
+    </div>
+  );
 }
 
-export default App
+export default App;
