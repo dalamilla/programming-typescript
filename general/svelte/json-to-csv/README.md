@@ -9,7 +9,7 @@ To start this app:
 - Installing Dependencies:
 
 ```
-npm install
+npm ci
 ```
 
 - Compiles and hot-reloads for development:
@@ -24,19 +24,24 @@ npm run dev
 npm run build
 ```
 
-- Run your unit tests:
+- Run unit tests:
 
 ```
 npm run test:unit
 ```
 
-- Lints and fixes files:
+- Run lint:
 
 ```
 npm run lint
 ```
 
+- Check format files:
+
+```
+npm run format
+```
+
 ## Basic Features
 
 - Check more about this project: [App-Ideas](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/JSON2CSV-App.md)
-
